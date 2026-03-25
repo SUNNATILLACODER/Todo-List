@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-base-200 min-h-screen">
+    <header class="flex">
+      <div class="max-w-[400px] w-full py-10 px-10 h-screen bg-base-100 shadow-xl flex flex-col justify-between">
+        <div>
+          <img src="image/menu 2 (1).png" alt="" />
+          <div class="flex flex-col items-center py-10">
+            <img class="w-32 h-32 rounded-full mb-4" src="image/avatar.png" alt="Avatar" />
+            <span class="font-bold text-xl">Jane Doe</span>
+            <p class="text-gray-500">janedoe@gmail.com</p>
+          </div>
+
+          <div class="flex items-center py-4 px-5 mt-5 bg-primary text-primary-content rounded-xl cursor-pointer hover:bg-slate-600">
+            <img class="px-5" src="image/list-todo.png" alt="">
+            <span class="font-bold">My Tasks</span>
+          </div>
+          
+          <div class="flex items-center py-4 px-5 cursor-pointer hover:bg-base-200 rounded-xl mt-2">
+            <img class="px-5" src="image/settings.png" alt="">
+            <span class="font-bold">Settings</span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between p-4 bg-base-200 rounded-2xl">
+          <span class="font-bold">Dark Mode</span>
+          <input type="checkbox" id="theme-toggle" class="toggle toggle-primary" />
+        </div>
+      </div>
+
+      <div class="flex-1 p-10">
+        <h1 class="text-7xl font-bold text-center mt-20 mb-10">My Tasks</h1>
+
+        <div class="max-w-[700px] mx-auto">
+          <form id="form" class="bg-base-100 rounded-2xl p-4 shadow-lg flex gap-3">
+            <input id="input" class="input input-bordered flex-1" type="text" placeholder="Enter your task..." />
+            <button type="submit" class="btn btn-primary">+ ADD</button>
+          </form>
+
+          <ul id="list" class="mt-10 space-y-4"></ul>
+        </div>
+      </div>
+    </header>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
